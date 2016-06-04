@@ -1,0 +1,333 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//@import "bootstrap-sprockets";
+//@import "bootstrap";
+
+
+
+@import '../base/borders';
+@import '../base/colors';
+@import '../base/fonts';
+@import '../components/headers';
+@import '../components/block_text';
+
+
+$nav-arrow-distance:20px;
+$nav-arrow-width: -64px;
+
+
+
+
+
+
+
+#introText{
+  margin: 3em auto;
+  
+  h5{
+    @extend %standard-header;
+    @include standard-header();
+  }
+  
+  h1{
+    @extend %fancy-header;
+   @include fancy-header();
+   @include rainbow-strike();
+   
+  }
+
+  p{
+    @include text-block();
+  }
+}
+
+
+
+.animate { transition: transform 0.3s ease-out; }
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+   display:block;
+  position:relative;
+  
+  .slide{
+    height:1px;
+    visibility:hidden;
+    
+    &.selected{
+      visibility:visible;
+      height:auto;
+    }
+  }
+  
+}
+
+
+.ms-touch.slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  
+  -ms-overflow-style: none;
+  /* Hides the scrollbar. */
+  
+  -ms-scroll-chaining: none;
+  /* Prevents Metro from swiping to the next tab or app. */
+  
+  -ms-scroll-snap-type: mandatory;
+  /* Forces a snap scroll behavior on your images. */
+  
+  -ms-scroll-snap-points-x: snapInterval(0%, 100%);
+  /* Defines the y and x intervals to snap to when scrolling. */
+}
+
+.holder {
+  //width: 300%;
+  //max-height: 500px;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.slide {
+  //width: 33.333%;
+  height: 100%;
+  float: left;
+ // min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.standardWidth{
+    margin: 0 auto;
+    width: 85%; 
+}
+
+.flex-container{
+  display:flex;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  align-content: center;
+  align-items: center;
+  width:100%;
+}
+
+.centerFlex{
+  margin:auto auto !important;
+}
+
+.bracket-box{
+  font-size:46px;
+    background-color: #fff;
+    display: block;
+    @include border-radius($corner);
+    padding:1em;
+    border-top:$thin-line solid $green;
+    border-bottom:$thin-line solid $blue;
+    position:relative;
+    margin-top:16px;
+    
+    &:before, &:after{
+     content:'';
+     position:absolute;
+     @include border-radius($corner);
+     height: 100%;
+     width: calc(100% - 4px); 
+     left:2px;
+     
+    }
+    
+    &:before{
+      margin-top: -15px;
+      background: $yellow;
+      z-index:-1;
+      border-top: 5px solid $pink;
+      top:0;
+    }
+    
+    &:after{
+      margin-top: $thin-line;
+      z-index:-2;
+      background-color: $purple;
+      top:$thin-line;
+    }
+}
+.point{
+  width: 100%;
+  
+  a.sibNav{
+            display:none;
+            font-size:180px;
+            color:#333;
+            position:fixed;
+            top: calc(50% - 107px);
+            z-index:200;
+            text-align:center;
+             i{
+              max-width:100px; 
+              &:before{
+                margin-left:0;
+                margin-right:0;
+                width:auto;
+              }
+             }
+            
+            
+          }
+  
+  .pointBox{
+    
+    
+   } 
+   
+   .optionSet li {
+     list-style-type:none;
+     line-height:1em;
+     a{
+       padding:0.3em;
+       display:inline-block;
+       color:#333;
+       
+       &.jumpTrigger:before{
+         vertical-align:middle;
+         content:'';
+         display:inline-block;
+         width:1.7em;
+         height:1.7em;
+         border-radius:1.7em;
+         border:2px solid $blue;
+         margin-left: -2em;
+         margin-right: 0.5em;
+         
+         &:hover, &:focus{
+           text-decoration:none;
+         }
+         
+       }
+     }
+     
+     &.selected a.jumpTrigger {
+       text-decoration:none;
+       &:before{
+         background-color: $blue;
+       }
+       
+
+     }
+   } 
+  
+  .children{
+    top: 100%;
+    width: 100%;
+
+    position:relative;
+    //display: -webkit-flex;
+   // display: flex;
+    //-webkit-align-items: top;
+    //align-items: top;
+    //display:block;
+    margin-top: 1em;
+    //overflow-y: visible;
+    overflow:visible;
+    //vertical-align:top;
+    //line-height:100%;
+    .holder{
+      
+      
+        >.point{
+         // position:absolute;
+         // left:-999999px;
+         // display:none;
+          
+          
+        }
+        
+        >.point.selected{
+          position:relative;
+          left:0;
+          float:left;
+          display:inline-block;
+          vertical-align:top;
+          top:0;
+          //line-height:100%;
+          //-webkit-flex: initial;
+          //flex:initial;
+          
+          
+           &.hasLeftSib > .pointBox.inWindow > a.leftArrow{
+              left:$nav-arrow-distance;
+              display:block;
+              
+            }
+            
+          
+            &.hasRightSib > .pointBox.inWindow > a.rightArrow{
+              right:$nav-arrow-distance;
+              display: block;
+            }
+            
+          
+          .pointBox.inWindow{
+           
+            &.arrowTop{
+              a.sibNav{
+                position:absolute;
+                top:20px;
+                bottom:auto;
+                
+                &.leftArrow{
+                  left:$nav-arrow-width;
+                }
+                &.rightArrow{
+                  right:$nav-arrow-width;
+                }
+              }
+            }
+            
+            &.arrowBottom{
+              a.sibNav{
+                position:absolute;
+                top:auto;
+                bottom:20px;
+                
+                &.leftArrow{
+                  left:$nav-arrow-width;
+                }
+                &.rightArrow{
+                  right:$nav-arrow-width;
+                }
+              }
+            }
+          }
+          
+        }
+        
+        .leftPoint, .rightPoint{
+         display:none;
+        }
+        
+        .leftPoint{  
+          left: -100%;
+          
+          
+        }
+        
+        
+        .rightPoint{
+          top:0;
+          right: -100%;
+          left:auto;
+          
+          
+        }
+      
+     } 
+    
+    
+  }
+ 
+ 
+}
+

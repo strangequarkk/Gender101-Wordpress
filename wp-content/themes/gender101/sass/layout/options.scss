@@ -1,0 +1,41 @@
+// Place all the styles related to the Options controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.optionSet li {
+  list-style-type:none;
+  line-height:1em;
+  a{
+    padding:0.3em;
+    display:inline-block;
+    color:#333;
+    text-decoration:none;
+
+    &.jumpTrigger:before{
+      vertical-align:middle;
+      content:'';
+      display:inline-block;
+      width:1.7em;
+      height:1.7em;
+      border-radius:1.7em;
+      border:2px solid $blue;
+      margin-left: -2em;
+      margin-right: 0.5em;
+
+      &:hover, &:focus{
+        text-decoration:none;
+      }
+
+    }
+
+    p{display:inline-block;}
+  }
+
+  &.selected a.jumpTrigger {
+    text-decoration:none;
+    &:before{
+      background-color: $blue;
+    }
+
+
+  }
+}

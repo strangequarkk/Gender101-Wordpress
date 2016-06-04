@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f3038bd8-ada4-4676-b566-aa9ee76dd3eb" name="g101 staging" url="http://stg.gender101.info">
+        <fileTransfer host="stg.gender101.info" port="21" username="genderon">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,153 @@
+// Place all the styles related to the points controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+form{
+  position:relative;
+  max-width:100%;
+  padding-top:0.4em;
+  
+  a.remove_fields, span.delete{
+    color:#333;
+    //border: 3px solid #fff;
+    display:inline-block;
+    line-height:0;
+    //padding: 0.8em 0.5em;
+    //border-radius:1em;
+    z-index:99;
+  }
+  
+  input{
+    border:1px solid #333;
+  }
+  
+  
+  trix-toolbar .button_group button, trix-toolbar .button_group input[type=button]{
+    text-indent:-99999px;
+    font-size:24px;
+    width:3em;
+    height:2.5em;
+  }
+
+  input[type="submit"]{
+   -webkit-appearance:none !important;
+   outline:none;
+   border: 1px solid #333;
+   color:#333;
+   border-radius: 1em; 
+   background:none !important;
+   font-size:1.5em;
+   padding:0.4em 0.8em;
+  }
+}
+
+#btn-submit-point{
+  margin: 0.5em 0 0.3em 0;
+}
+
+a.btn, input[type="submit"].btn{
+ color:#333;
+ border: 1px solid #333;
+ border-radius: 1em; 
+ background-color:none !important;
+ font-size: 34px;
+ padding:0.3em 0.6em;
+ 
+ &.addPoint{
+   margin:1.5em 0;
+ }
+ 
+ &.noBorder{
+   border:none;
+ }
+}
+
+#pointsList{
+  .point-text > div {
+    color:#111;
+    background-color:#fff;
+    padding:0.5em;
+  }
+}
+
+
+.listObj{
+  
+  width:100%;
+  max-width:100% !important;
+  color:#333;
+  font-size:34px;
+ 
+ a{
+   color:#333;
+ }
+  table{
+    border-collapse:collapse;
+    max-width:100%;
+    //padding: 0.4em 0;
+  }
+
+  th{
+    border-bottom: 1px solid #333;
+  }
+  
+  .dragHandle{
+    font-size:1.5em;
+    padding:0.4em 0;
+    max-width: 50px;
+    i{
+      display:block;
+      margin-left: -10px;
+    }
+  }
+  td, th{
+    line-height:1em;
+     padding: 0.5em 0.3em;
+     
+      textarea{
+        width:17em;
+        height:4em;
+      }
+      .styled-select{
+      select{
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        font-size: 1.3em;
+        line-height:1.3em;
+        width:3.5em;
+        height: 1.5em;
+        background:none;
+        padding:0 0.3em;
+        border:2px solid #333;
+        
+        
+      }
+      &:after{
+          content:'\25bc';
+          margin-left:-1.6em;
+        }
+        
+      }
+  
+  }
+ 
+  
+}
+
+#optionsGrid{
+  margin-top:3em;
+}
+
+trix-editor{
+  background-color:#fff;
+  margin-top:1.7em !important;
+  height:20em;
+
+  overflow:scroll;
+  >div{
+      
+  font-size:0.5em;
+  }
+  
+}

@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css?family=Neuton:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Chonburi);
+@import url(https://fonts.googleapis.com/css?family=Voces);
+@import url(https://fonts.googleapis.com/css?family=Monofett);
+@import url(https://fonts.googleapis.com/css?family=Neuton:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Chonburi);
+@import url(https://fonts.googleapis.com/css?family=Voces);
+@import url(https://fonts.googleapis.com/css?family=Monofett);
+@import url(https://fonts.googleapis.com/css?family=Neuton:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Chonburi);
+@import url(https://fonts.googleapis.com/css?family=Voces);
+@import url(https://fonts.googleapis.com/css?family=Monofett);
+@import url(https://fonts.googleapis.com/css?family=Neuton:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Chonburi);
+@import url(https://fonts.googleapis.com/css?family=Voces);
+@import url(https://fonts.googleapis.com/css?family=Monofett);
+@import url(https://fonts.googleapis.com/css?family=Neuton:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,300italic,100italic);
+@import url(https://fonts.googleapis.com/css?family=Chonburi);
+@import url(https://fonts.googleapis.com/css?family=Voces);
+@import url(https://fonts.googleapis.com/css?family=Monofett);
+html {
+  font-size: 62.5%; }
+
+html {
+  font-size: 62.5%; }
+
+html {
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden; }
+
+body {
+  background: #f6f6f6;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif; }
+
+html {
+  font-size: 62.5%; }
+
+#introText h5 {
+  font-family: "Voces", sans-serif;
+  margin: 0; }
+
+#introText h1 {
+  font-family: "Monofett", sans-serif;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  letter-spacing: 2px;
+  margin: 0; }
+
+form {
+  position: relative;
+  max-width: 100%;
+  padding-top: 0.4em; }
+  form a.remove_fields, form span.delete {
+    color: #333;
+    display: inline-block;
+    line-height: 0;
+    z-index: 99; }
+  form input {
+    border: 1px solid #333; }
+  form trix-toolbar .button_group button, form trix-toolbar .button_group input[type=button] {
+    text-indent: -99999px;
+    font-size: 24px;
+    width: 3em;
+    height: 2.5em; }
+  form input[type="submit"] {
+    -webkit-appearance: none !important;
+    outline: none;
+    border: 1px solid #333;
+    color: #333;
+    border-radius: 1em;
+    background: none !important;
+    font-size: 1.5em;
+    padding: 0.4em 0.8em; }
+
+#btn-submit-point {
+  margin: 0.5em 0 0.3em 0; }
+
+a.btn, input[type="submit"].btn {
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 1em;
+  background-color: none !important;
+  font-size: 34px;
+  padding: 0.3em 0.6em; }
+  a.btn.addPoint, input[type="submit"].btn.addPoint {
+    margin: 1.5em 0; }
+  a.btn.noBorder, input[type="submit"].btn.noBorder {
+    border: none; }
+
+#pointsList .point-text > div {
+  color: #111;
+  background-color: #fff;
+  padding: 0.5em; }
+
+.listObj {
+  width: 100%;
+  max-width: 100% !important;
+  color: #333;
+  font-size: 34px; }
+  .listObj a {
+    color: #333; }
+  .listObj table {
+    border-collapse: collapse;
+    max-width: 100%; }
+  .listObj th {
+    border-bottom: 1px solid #333; }
+  .listObj .dragHandle {
+    font-size: 1.5em;
+    padding: 0.4em 0;
+    max-width: 50px; }
+    .listObj .dragHandle i {
+      display: block;
+      margin-left: -10px; }
+  .listObj td, .listObj th {
+    line-height: 1em;
+    padding: 0.5em 0.3em; }
+    .listObj td textarea, .listObj th textarea {
+      width: 17em;
+      height: 4em; }
+    .listObj td .styled-select select, .listObj th .styled-select select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-size: 1.3em;
+      line-height: 1.3em;
+      width: 3.5em;
+      height: 1.5em;
+      background: none;
+      padding: 0 0.3em;
+      border: 2px solid #333; }
+    .listObj td .styled-select:after, .listObj th .styled-select:after {
+      content: '\25bc';
+      margin-left: -1.6em; }
+
+#optionsGrid {
+  margin-top: 3em; }
+
+trix-editor {
+  background-color: #fff;
+  margin-top: 1.7em !important;
+  height: 20em;
+  overflow: scroll; }
+  trix-editor > div {
+    font-size: 0.5em; }
+
+html {
+  font-size: 62.5%; }
+
+html {
+  font-size: 62.5%; }
+
+#introText h5 {
+  font-family: "Voces", sans-serif;
+  margin: 0; }
+
+#introText h1 {
+  font-family: "Monofett", sans-serif;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  letter-spacing: 2px;
+  margin: 0; }
+
+#introText {
+  margin: 3em auto; }
+  #introText h5 {
+    font-size: 2rem;
+    line-height: 2rem; }
+  #introText h1 {
+    font-size: 5.5rem;
+    color: #000;
+    line-height: 5.5rem;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0); }
+    #introText h1 span {
+      background: #f6f6f6;
+      display: inline-block;
+      transform: translate3d(0, 0, 1px);
+      -webkit-transform: translate3d(0, 0, 1px);
+      -moz-transform: translate3d(0, 0, 1px); }
+    #introText h1:before, #introText h1:after {
+      clear: both;
+      content: '';
+      position: absolute;
+      display: block;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      margin-left: -50%;
+      width: 200%; }
+    #introText h1:after {
+      top: calc(50% + (4px * 1.5));
+      height: 4px;
+      border-top: 4px solid #6bf;
+      background-color: #96f;
+      z-index: -1; }
+    #introText h1:before {
+      top: calc(50% -  (4px * 1.5));
+      height: 4px;
+      background-color: #ff6;
+      border-top: 4px solid #f9e;
+      border-bottom: 4px solid #6f6; }
+  #introText p {
+    font-size: 1.6rem;
+    line-height: 1.3em; }
+
+.animate {
+  transition: transform 0.3s ease-out; }
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative; }
+  .slider .slide {
+    height: 1px;
+    visibility: hidden; }
+    .slider .slide.selected {
+      visibility: visible;
+      height: auto; }
+
+.ms-touch.slider {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  /* Hides the scrollbar. */
+  -ms-scroll-chaining: none;
+  /* Prevents Metro from swiping to the next tab or app. */
+  -ms-scroll-snap-type: mandatory;
+  /* Forces a snap scroll behavior on your images. */
+  -ms-scroll-snap-points-x: snapInterval(0%, 100%);
+  /* Defines the y and x intervals to snap to when scrolling. */ }
+
+.holder {
+  height: 100%;
+  overflow-y: hidden; }
+
+.slide {
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden; }
+
+.standardWidth {
+  margin: 0 auto;
+  width: 85%; }
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-content: center;
+  align-items: center;
+  width: 100%; }
+
+.centerFlex {
+  margin: auto auto !important; }
+
+.bracket-box {
+  font-size: 46px;
+  background-color: #fff;
+  display: block;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  border-radius: 1em;
+  padding: 1em;
+  border-top: 4px solid #6f6;
+  border-bottom: 4px solid #6bf;
+  position: relative;
+  margin-top: 16px; }
+  .bracket-box:before, .bracket-box:after {
+    content: '';
+    position: absolute;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
+    height: 100%;
+    width: calc(100% - 4px);
+    left: 2px; }
+  .bracket-box:before {
+    margin-top: -15px;
+    background: #ff6;
+    z-index: -1;
+    border-top: 5px solid #f9e;
+    top: 0; }
+  .bracket-box:after {
+    margin-top: 4px;
+    z-index: -2;
+    background-color: #96f;
+    top: 4px; }
+
+.point {
+  width: 100%; }
+  .point a.sibNav {
+    display: none;
+    font-size: 180px;
+    color: #333;
+    position: fixed;
+    top: calc(50% - 107px);
+    z-index: 200;
+    text-align: center; }
+    .point a.sibNav i {
+      max-width: 100px; }
+      .point a.sibNav i:before {
+        margin-left: 0;
+        margin-right: 0;
+        width: auto; }
+  .point .optionSet li {
+    list-style-type: none;
+    line-height: 1em; }
+    .point .optionSet li a {
+      padding: 0.3em;
+      display: inline-block;
+      color: #333; }
+      .point .optionSet li a.jumpTrigger:before {
+        vertical-align: middle;
+        content: '';
+        display: inline-block;
+        width: 1.7em;
+        height: 1.7em;
+        border-radius: 1.7em;
+        border: 2px solid #6bf;
+        margin-left: -2em;
+        margin-right: 0.5em; }
+        .point .optionSet li a.jumpTrigger:before:hover, .point .optionSet li a.jumpTrigger:before:focus {
+          text-decoration: none; }
+    .point .optionSet li.selected a.jumpTrigger {
+      text-decoration: none; }
+      .point .optionSet li.selected a.jumpTrigger:before {
+        background-color: #6bf; }
+  .point .children {
+    top: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 1em;
+    overflow: visible; }
+    .point .children .holder > .point.selected {
+      position: relative;
+      left: 0;
+      float: left;
+      display: inline-block;
+      vertical-align: top;
+      top: 0; }
+      .point .children .holder > .point.selected.hasLeftSib > .pointBox.inWindow > a.leftArrow {
+        left: 20px;
+        display: block; }
+      .point .children .holder > .point.selected.hasRightSib > .pointBox.inWindow > a.rightArrow {
+        right: 20px;
+        display: block; }
+      .point .children .holder > .point.selected .pointBox.inWindow.arrowTop a.sibNav {
+        position: absolute;
+        top: 20px;
+        bottom: auto; }
+        .point .children .holder > .point.selected .pointBox.inWindow.arrowTop a.sibNav.leftArrow {
+          left: -64px; }
+        .point .children .holder > .point.selected .pointBox.inWindow.arrowTop a.sibNav.rightArrow {
+          right: -64px; }
+      .point .children .holder > .point.selected .pointBox.inWindow.arrowBottom a.sibNav {
+        position: absolute;
+        top: auto;
+        bottom: 20px; }
+        .point .children .holder > .point.selected .pointBox.inWindow.arrowBottom a.sibNav.leftArrow {
+          left: -64px; }
+        .point .children .holder > .point.selected .pointBox.inWindow.arrowBottom a.sibNav.rightArrow {
+          right: -64px; }
+    .point .children .holder .leftPoint, .point .children .holder .rightPoint {
+      display: none; }
+    .point .children .holder .leftPoint {
+      left: -100%; }
+    .point .children .holder .rightPoint {
+      top: 0;
+      right: -100%;
+      left: auto; }
+
+/*# sourceMappingURL=style.css.map */

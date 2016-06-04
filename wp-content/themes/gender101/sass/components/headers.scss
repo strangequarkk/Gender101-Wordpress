@@ -1,0 +1,79 @@
+@import '../base/fonts';
+@import '../base/colors';
+@import '../utils/multibrowser';
+
+$big-header: 5.5rem;
+$medium-header:2rem;
+$small-header: 1rem;
+
+// Standard Header
+%standard-header {
+    font-family:$Voces;
+    margin: 0;
+
+
+}
+
+@mixin standard-header ($size: $medium-header){;
+    font-size: $size;
+    line-height: $size;
+}
+
+// ~Fancy~ header
+
+%fancy-header{
+  font-family:$Monofett;
+  text-align:center;
+  width:100%;
+  position:relative;
+  letter-spacing:2px;
+  margin:0;
+}
+
+@mixin fancy-header ($color: $black, $size: $big-header){
+   
+    font-size:$size;
+    color:$color;
+    line-height:$size; 
+}
+
+@mixin rainbow-strike($bgcolor: $offwhite){
+  @include translate3d(0,0,0);
+  
+   span{
+      background:$bgcolor;
+     display:inline-block;
+     @include translate3d(0, 0, 1px);
+    }
+    
+    &:before, &:after{
+      clear:both;
+     content:'';
+     position:absolute;
+     display:block;
+     @include translate3d(0,0,0);
+      margin-left:-50%;
+      width:200%;
+    }
+    
+    &:after{
+    top: calc(50% + (#{$thin-line} * 1.5));
+    height:$thin-line;
+
+      border-top: $thin-line solid $blue;
+      background-color:$purple;
+     z-index: -1;
+    }
+    
+    &:before{
+      top: calc(50% -  (#{$thin-line} * 1.5));
+     height:$thin-line;
+      background-color:$yellow;
+      border-top: $thin-line solid $pink;
+      border-bottom: $thin-line solid $green;
+    }
+  
+}
+
+
+// Sub-header

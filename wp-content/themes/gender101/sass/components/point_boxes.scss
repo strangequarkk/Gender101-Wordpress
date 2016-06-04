@@ -1,0 +1,80 @@
+
+
+@mixin rainbow-line($thickness, $stripe-diff){
+  text-align:center;
+  border-top: $thickness solid $yellow;
+  border-bottom: $thickness solid $blue;
+  color: $green;
+  background-color: $green;
+  height:$thickness;
+  border-left:none;
+  border-right:none;
+  position:relative;
+
+
+  &:before, &:after{
+    display:block;
+    width: calc(100% - #{$stripe-diff});
+    content:'';
+    position: absolute;
+    height: $thickness;
+    left: calc((#{$stripe-diff} / 2));
+  }
+
+  &:before{
+    top: calc( -2 * #{$thickness});
+    background: $pink;
+
+  }
+
+  &:after{
+    bottom: calc( -2 * #{$thickness});
+    background-color: $purple;
+  }
+
+
+}
+
+hr.rainbow{
+  margin: 2.0rem 0;
+  @include rainbow-line($stripe-thin, 0px);
+}
+
+hr.rainbow-mini{
+  @include rainbow-line($stripe-mini, 30%);
+
+
+}
+
+.bracket-box{
+  border-radius:6px;
+  font-size:1.6rem;
+  background-color: #fff;
+  display: block;
+  padding:1em;
+  position:relative;
+  margin-top:16px;
+
+  hr{
+    border-left:none;
+    border-right:none;
+    width:80%;
+  }
+
+
+/*span.modWidth{
+  display:block;
+  width: 80%;
+  height:1px;
+  background-color: $green;
+  margin: 1.6rem auto;
+  position:relative;
+  hr{
+    top:-1px;
+    width: calc(70%);
+
+  }
+
+}*/
+
+}
