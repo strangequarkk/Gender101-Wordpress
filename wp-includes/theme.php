@@ -211,7 +211,7 @@ function get_stylesheet_directory_uri() {
 /**
  * Retrieve URI of current theme stylesheet.
  *
- * The stylesheet file name is 'style-orig.css' which is appended to {@link
+ * The stylesheet file name is 'style.css' which is appended to {@link
  * get_stylesheet_directory_uri() stylesheet directory URI} path.
  *
  * @since 1.5.0
@@ -500,7 +500,7 @@ function search_theme_directories( $force = false ) {
 					);
 					$found_theme = true;
 				}
-				// Never mind the above, it's just a theme missing a style-orig.css.
+				// Never mind the above, it's just a theme missing a style.css.
 				// Return it; WP_Theme will catch the error.
 				if ( ! $found_theme )
 					$found_themes[ $dir ] = array(
@@ -754,7 +754,7 @@ function switch_theme( $stylesheet ) {
 }
 
 /**
- * Checks that current theme files 'index.php' and 'style-orig.css' exists.
+ * Checks that current theme files 'index.php' and 'style.css' exists.
  *
  * Does not initially check the default theme, which is the fallback and should always exist.
  * But if it doesn't exist, it'll fall back to the latest core default theme that does exist.
@@ -1360,7 +1360,7 @@ function _custom_background_cb() {
 	$background = set_url_scheme( get_background_image() );
 
 	// $color is the saved custom color.
-	// A default has to be specified in style-orig.css. It will not be printed here.
+	// A default has to be specified in style.css. It will not be printed here.
 	$color = get_background_color();
 
 	if ( $color === get_theme_support( 'custom-background', 'default-color' ) ) {
@@ -1404,7 +1404,7 @@ body.custom-background { <?php echo trim( $style ); ?> }
  *
  * The parameter $stylesheet is the name of the stylesheet, relative to
  * the theme root. It also accepts an array of stylesheets.
- * It is optional and defaults to 'editor-style-orig.css'.
+ * It is optional and defaults to 'editor-style.css'.
  *
  * This function automatically adds another stylesheet with -rtl prefix, e.g. editor-style-rtl.css.
  * If that file doesn't exist, it is removed before adding the stylesheet(s) to TinyMCE.
@@ -1419,7 +1419,7 @@ body.custom-background { <?php echo trim( $style ); ?> }
  * @global array $editor_styles
  *
  * @param array|string $stylesheet Optional. Stylesheet name or array thereof, relative to theme root.
- * 	                               Defaults to 'editor-style-orig.css'
+ * 	                               Defaults to 'editor-style.css'
  */
 function add_editor_style( $stylesheet = 'editor-style.css' ) {
 	add_theme_support( 'editor-style' );

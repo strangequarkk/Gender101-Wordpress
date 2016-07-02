@@ -11,6 +11,7 @@
     text-decoration:none;
 
     &.jumpTrigger:before{
+      float:left;
       vertical-align:middle;
       content:'';
       display:inline-block;
@@ -27,7 +28,12 @@
 
     }
 
-    p{display:inline-block;}
+    p{
+      display:inline-block;
+      max-width:calc(100% - 1.7em );
+      vertical-align:middle;
+      margin-top:0;
+    }
   }
 
   &.selected a.jumpTrigger {

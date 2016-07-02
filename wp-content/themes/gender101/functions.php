@@ -37,7 +37,7 @@
     {
       //  wp_enqueue_script( 'jquery' );
 
-
+        wp_enqueue_script('carosel',  get_bloginfo('template_directory').'/js/sqslider.js', array('jquery') );
         wp_enqueue_script( 'ajax-script', get_bloginfo('template_directory').'/js/get_next_point.js', array('jquery') );
 
         // in JavaScript, object properties are accessed as ajax_object.ajax_url, ajax_object.we_value

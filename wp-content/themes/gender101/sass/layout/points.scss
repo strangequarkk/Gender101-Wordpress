@@ -158,6 +158,8 @@ trix-editor{
 .point{
   width: 100%;
 
+
+
   a.sibNav{
     display:none;
     font-size:180px;
@@ -202,7 +204,7 @@ trix-editor{
         // position:absolute;
         // left:-999999px;
         // display:none;
-
+        display:inline-block;
 
       }
 
@@ -210,7 +212,7 @@ trix-editor{
         position:relative;
         left:0;
         float:left;
-        display:inline-block;
+
         vertical-align:top;
         top:0;
         //line-height:100%;
@@ -267,7 +269,7 @@ trix-editor{
       }
 
       .leftPoint, .rightPoint{
-        display:none;
+        //display:none;
       }
 
       .leftPoint{

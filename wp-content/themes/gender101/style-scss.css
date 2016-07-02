@@ -145,6 +145,7 @@ nav#menu {
     color: #333;
     text-decoration: none; }
     .optionSet li a.jumpTrigger:before {
+      float: left;
       vertical-align: middle;
       content: '';
       display: inline-block;
@@ -157,7 +158,10 @@ nav#menu {
       .optionSet li a.jumpTrigger:before:hover, .optionSet li a.jumpTrigger:before:focus {
         text-decoration: none; }
     .optionSet li a p {
-      display: inline-block; }
+      display: inline-block;
+      max-width: calc(100% - 1.7em );
+      vertical-align: middle;
+      margin-top: 0; }
   .optionSet li.selected a.jumpTrigger {
     text-decoration: none; }
     .optionSet li.selected a.jumpTrigger:before {
@@ -282,11 +286,12 @@ trix-editor {
     position: relative;
     margin-top: 1em;
     overflow: visible; }
+    .point .children .holder > .point {
+      display: inline-block; }
     .point .children .holder > .point.selected {
       position: relative;
       left: 0;
       float: left;
-      display: inline-block;
       vertical-align: top;
       top: 0; }
       .point .children .holder > .point.selected.hasLeftSib > .pointBox.inWindow > a.leftArrow {
@@ -311,8 +316,6 @@ trix-editor {
           left: -64px; }
         .point .children .holder > .point.selected .pointBox.inWindow.arrowBottom a.sibNav.rightArrow {
           right: -64px; }
-    .point .children .holder .leftPoint, .point .children .holder .rightPoint {
-      display: none; }
     .point .children .holder .leftPoint {
       left: -100%; }
     .point .children .holder .rightPoint {
