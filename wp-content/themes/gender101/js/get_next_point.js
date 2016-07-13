@@ -23,6 +23,7 @@ $(document).ready(function(){
         var oldSelected = curPoint.children('.children').children('.holder').children('.selected').first();
         var curOpt = $(this);
         var sibOpts = $(this).siblings();
+        var optionSet = $(this).parents('.optionSet').children('li');
         var destHref = $(this).children('a.jumpTrigger').attr('href');
 
 
@@ -30,19 +31,37 @@ $(document).ready(function(){
 
         window.parentPoint = $(this).closest('.point');
 
-        if($(document).find( $(destHref) ).length == 0){
+        //this point's children haven't been loaded yet
+        if(curOpt.attr('hasLoaded') == "no"){
+        //if($(document).find( $(destHref) ).length == 0){
             try{
                 // Find the id of the point the option is leading to
-                destID = parseInt($(this).children('a.jumpTrigger').attr('href').replace('#p', ''));
+                destID = parseInt(destHref.replace('#p', ''));
             }
             catch(e){
                 console.log('lmao what the heck was that');
             }
-            if(destID){
-                ajax_get_point(destID, curPoint, curOpt, sibOpts, oldSelected);
+            var childrenToLoad = [];
+
+            // only load children that aren't already on the page
+            curOpt.parents('.optionSet').children('li').each(function(){
+            //$.each(optionSet, function(i, childOpt){
+                //console.log(childOpt);
+                var optDest = $(this).children('a.jumpTrigger').attr('href');
+                if($(document).find( $(optDest) ).length == 0){
+                    childrenToLoad.push(parseInt(optDest.replace('#p', '')))
+                }
+            } );
+
+            if(childrenToLoad.length > 0){
+                ajax_load_children(childrenToLoad, optionSet, curOpt, destID);
             }
+           /* if(destID){
+
+                ajax_get_point(destID, curPoint, curOpt, sibOpts, oldSelected);
+            }*/
         }else{
-            console.log('point is already on the page');
+            console.log('children are already loaded');
 
             //if destination is an ancestor or a descendant, just jump to it
             if((curPoint.parents(destHref).length > 0)  || (curPoint.children('.children').children('.holder').children(destHref).length > 0)){
@@ -76,7 +95,6 @@ $(document).ready(function(){
 
     function ajax_get_point(destID, curPoint, curOpt, sibOpts, oldSelected){
 
-
         var data = {
             'action': 'get_next_point',
             'destID' : destID
@@ -90,9 +108,32 @@ $(document).ready(function(){
                 animateTransition(oldSelected, newPoint);
             }
 
-            //curPoint.children('.children').first().append();
-            //sibOpts.removeClass('selected');
-            //curOpt.addClass('selected');
+            sibOpts.removeClass('selected');
+            curOpt.addClass('selected');
+        });
+
+    }
+
+    function ajax_load_children(childrenToLoad, optionSet, curOpt, destID){
+
+        var data = {
+            'action': 'get_child_posts',
+            'childIDs' : childrenToLoad
+        };
+        var holder = window.parentPoint.children('.children').children('.holder');
+        // Get the selected point & put it in the 'children' area of the parent point
+        jQuery.post(ajax_object.ajax_url, data, function(response) {
+            console.log(response);
+            if(window.parentPoint.children('.children').children('.holder').children('.point').length > 0){
+                console.log('place child points around a stolen point, good luck');
+            }else{
+                holder.append(response);
+            }
+            holder.children('.selected').removeClass('selected');
+            holder.children('#p'+destID).addClass('selected');
+            slidingPoints.update();
+            optionSet.removeClass('selected').attr('hasLoaded', 'yes');
+            curOpt.addClass('selected');
 
         });
 

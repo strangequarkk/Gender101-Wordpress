@@ -2,12 +2,40 @@
     if ( is_admin() ) {
         add_action('wp_ajax_nopriv_get_next_point', 'get_next_point_callback');
         add_action('wp_ajax_get_next_point', 'get_next_point_callback');
+        add_action('wp_ajax_nopriv_get_child_posts', 'get_child_posts_callback');
+        add_action('wp_ajax_get_child_posts', 'get_child_posts_callback');
     }
+
+
+function get_child_posts(){
+
+    global $post;
+    $childIDs = $_POST['childIDs'];
+    //echo $_POST['childIDs'];
+    echo $childIDs;
+    //$wqArgs = array("include" => $childIDs);
+    //echo($wqArgs);
+    //$postArr = get_posts($wqArgs);
+    $postArr = new WP_Query( array(
+        'post__in' => $childIDs
+    ));
+    //print_r($postArr);
+    foreach($postArr as $post){
+        setup_postdata( $post );
+        //print_r($post);
+        get_template_part( 'single-point', 'content' );
+        wp_reset_post_data();
+    }
+
+    wp_die();
+}
+
 
     function get_next_point_callback(){
 
         global $post;
         $destID = intval($_POST['destID']);
+
         $post = get_post($destID);
         setup_postdata( $post );
 

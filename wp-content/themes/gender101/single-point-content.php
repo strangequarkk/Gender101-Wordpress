@@ -7,7 +7,7 @@
         <hr />
         <ul class="optionSet">
             <?php while(have_rows('options')) : the_row(); ?>
-            <li opt-id="<?php echo get_row_index(); ?>">
+            <li opt-id="<?php echo get_row_index(); ?>" hasLoaded="no">
                 <a href = "#p<?php the_sub_field('destination'); ?>" class="jumpTrigger" opt-id="<?php echo get_row_index(); ?>" ><?php the_sub_field('text'); ?></a>
                 <? /*<%= link_to '',
                 fetch_point_path(:pt_id => option.destination),
